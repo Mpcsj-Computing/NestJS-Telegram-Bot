@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-  <a href="http://nestjs.com/" target="blank"><img src="https://i.imgur.com/tDyH4Th.png" width="320" alt="N Logo" /></a>
+  <a href="https://telegram.org" target="blank"><img src="https://i.imgur.com/tDyH4Th.png" width="220" alt="N Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
