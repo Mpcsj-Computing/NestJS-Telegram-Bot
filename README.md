@@ -29,6 +29,7 @@
   1. `TELEGRAM_TOKEN` -> Your telegram token
   2. `TEST_CHAT_ID` -> A test chat id for your code to send messages
 
+- [BotFather manual](https://core.telegram.org/bots)
 - [BotFather contact on Telegram](https://telegram.me/BotFather)
 - [NPM Package for Telegram](https://www.npmjs.com/package/node-telegram-bot-api)
 
