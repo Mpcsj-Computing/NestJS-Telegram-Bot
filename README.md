@@ -5,7 +5,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">Simple NestJS telegram Bot</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -24,50 +24,72 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- To run the project, you must add two environment variables:
+
+  1. `TELEGRAM_TOKEN` -> Your telegram token
+  2. `TEST_CHAT_ID` -> A test chat id for your code to send messages
+
+- [BotFather contact on Telegram](https://telegram.me/BotFather)
+- [NPM Package for Telegram](https://www.npmjs.com/package/node-telegram-bot-api)
+
+## Video fixes
+
+1. You can actually install types for the project by running: `yarn add @types/node-telegram-bot-api --dev`. There are commented lines on the service layer with the typed code
+2. You actually must send a message to a `chat_id` rather than a `user_id` on Telegram. However, if you are sending a message to one user directly rather than a group with multiple users, then the `chat_id` is the same as the `user_id` as the example below:
+
+```javascript
+  {
+  "message_id": 9,
+  "from": {
+    "id": 123123123, // this is a user id (is the same as the chat id if you are sending a message to one person directly)
+    "is_bot": false,
+    "first_name": "UserFirstName",
+    "last_name": "UserLastName",
+    "language_code": "en"
+  },
+  "chat": {
+    "id": 123123123, // this is the one that you actually send a message to, but it is ok to use the previous one if you want to send a message to one person directly
+    "first_name": "UserFirstName",
+    "last_name": "UserLastName",
+    "type": "private"
+},
+"date": 1669948713,
+"text": "Message sent by user on Telegram"
+}
+```
 
 ## Installation
 
 ```bash
-$ npm install
+$ yarn
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ npm run start
+$ yarn start
 
 # watch mode
-$ npm run start:dev
+$ yarn start:dev
 
 # production mode
-$ npm run start:prod
+$ yarn start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
+$ yarn test
 
 # e2e tests
-$ npm run test:e2e
+$ yarn test:e2e
 
 # test coverage
-$ npm run test:cov
+$ yarn test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Website - [https://mpcsj.com](https://mpcsj.com/)
