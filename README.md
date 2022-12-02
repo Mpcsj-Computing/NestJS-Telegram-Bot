@@ -63,7 +63,7 @@
 ## Installation
 
 ```bash
-# Instal dependencies
+# Install dependencies
 $ yarn
 ```
 
